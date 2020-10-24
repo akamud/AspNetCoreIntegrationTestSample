@@ -2,6 +2,12 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCoreIntegrationTestSample", "AspNetCoreIntegrationTestSample\AspNetCoreIntegrationTestSample.csproj", "{CEFAA03A-5B11-4BF7-A9FA-E1E19AEEF304}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{D4CF8606-D3C5-4505-8EF5-D037FEE810FF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4ED5F6A0-8D85-4932-B810-4001A0388524}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCoreIntegrationTestSample.IntegrationTests", "AspNetCoreIntegrationTestSample.IntegrationTests\AspNetCoreIntegrationTestSample.IntegrationTests.csproj", "{CFD5B3AA-AB4D-4E87-B141-6EDD624CCD80}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +18,13 @@ Global
 		{CEFAA03A-5B11-4BF7-A9FA-E1E19AEEF304}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CEFAA03A-5B11-4BF7-A9FA-E1E19AEEF304}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CEFAA03A-5B11-4BF7-A9FA-E1E19AEEF304}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFD5B3AA-AB4D-4E87-B141-6EDD624CCD80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFD5B3AA-AB4D-4E87-B141-6EDD624CCD80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFD5B3AA-AB4D-4E87-B141-6EDD624CCD80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFD5B3AA-AB4D-4E87-B141-6EDD624CCD80}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CEFAA03A-5B11-4BF7-A9FA-E1E19AEEF304} = {4ED5F6A0-8D85-4932-B810-4001A0388524}
+		{CFD5B3AA-AB4D-4E87-B141-6EDD624CCD80} = {D4CF8606-D3C5-4505-8EF5-D037FEE810FF}
 	EndGlobalSection
 EndGlobal
