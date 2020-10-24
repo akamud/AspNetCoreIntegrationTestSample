@@ -54,7 +54,7 @@ namespace AspNetCoreIntegrationTestSample.IntegrationTests.Specs
             contexto.Add(blog);
             contexto.SaveChanges();
 
-            var repositorio = GetService<BlogsRepositorio>();
+            var repositorio = GetServiceParaAsserts<BlogsRepositorio>();
 
             var blogDoBanco = await repositorio.ObterBlog(blog.BlogId);
 

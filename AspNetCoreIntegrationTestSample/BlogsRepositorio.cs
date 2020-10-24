@@ -1,4 +1,4 @@
-﻿using System.Linq;
+﻿using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
 
 namespace AspNetCoreIntegrationTestSample
@@ -15,13 +15,15 @@ namespace AspNetCoreIntegrationTestSample
         public async Task InserirBlog(Blog blog)
         {
             _bloggingContext.Add(blog);
-            
+
             await _bloggingContext.SaveChangesAsync();
         }
 
         public async Task<Blog> ObterBlog(int blogId)
         {
-            return await _bloggingContext.Blogs.FindAsync(blogId);
+            return await _bloggingContext.Blogs
+                .Include(x => x.Posts)
+                .FirstOrDefaultAsync(x => x.BlogId == blogId);
         }
     }
 }

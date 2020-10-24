@@ -1,6 +1,4 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=be44e555_002D89f0_002D4136_002Daab5_002D00da981ad67b/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="BlogTestes" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::CFD5B3AA-AB4D-4E87-B141-6EDD624CCD80::.NETCoreApp,Version=v3.1::AspNetCoreIntegrationTestSample.IntegrationTests.Specs.BlogTestes&lt;/TestId&gt;&#xD;
-  &lt;/TestAncestor&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=70e3caa3_002Dec65_002D428a_002D99c9_002D6f67e8cfe13e/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from &amp;lt;test&amp;gt;\&amp;lt;AspNetCoreIntegrationTestSample.IntegrationTests&amp;gt;" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Project Location="D:\Repositorios\AspNetCoreIntegrationTestSample\AspNetCoreIntegrationTestSample.IntegrationTests" Presentation="&amp;lt;test&amp;gt;\&amp;lt;AspNetCoreIntegrationTestSample.IntegrationTests&amp;gt;" /&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
