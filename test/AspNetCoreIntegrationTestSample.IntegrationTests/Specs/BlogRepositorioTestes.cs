@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AspNetCoreIntegrationTestSample.IntegrationTests.Specs
 {
-    public class BlogTestes : TesteBaseBanco
+    public class BlogRepositorioTestes : TesteBaseBanco
     {
         // Exemplo de teste com Save
         [Test]
