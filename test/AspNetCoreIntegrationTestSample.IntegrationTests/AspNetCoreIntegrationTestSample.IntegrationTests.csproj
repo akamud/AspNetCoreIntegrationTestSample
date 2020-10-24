@@ -18,7 +18,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\AspNetCoreIntegrationTestSample\AspNetCoreIntegrationTestSample.csproj" />
+      <ProjectReference Include="..\..\src\AspNetCoreIntegrationTestSample\AspNetCoreIntegrationTestSample.csproj" />
     </ItemGroup>
 
 </Project>
