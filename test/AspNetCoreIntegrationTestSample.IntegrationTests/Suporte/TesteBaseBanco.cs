@@ -37,7 +37,6 @@ namespace AspNetCoreIntegrationTestSample.IntegrationTests.Suporte
         public void TearDownScope()
         {
             _scope.Dispose();
-            _contextParaTestes.Dispose();
         }
     }
 }
