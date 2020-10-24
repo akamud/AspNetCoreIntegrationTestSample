@@ -1,5 +1,6 @@
 ﻿using AspNetCoreIntegrationTestSample.IntegrationTests.Suporte;
 using FluentAssertions;
+using Microsoft.EntityFrameworkCore;
 using NUnit.Framework;
 using System.Linq;
 using System.Threading.Tasks;
@@ -28,9 +29,9 @@ namespace AspNetCoreIntegrationTestSample.IntegrationTests.Specs
 
             await repositorio.InserirBlog(blog);
 
-            var contexto = GetService<BloggingContext>();
-            
-            var blogDoBanco = contexto.Blogs.FirstOrDefault();
+            var blogDoBanco = _contextParaTestes.Blogs
+                .Include(x => x.Posts)
+                .FirstOrDefault();
             blogDoBanco.Should().BeEquivalentTo(blog);
         }
 
@@ -38,7 +39,6 @@ namespace AspNetCoreIntegrationTestSample.IntegrationTests.Specs
         [Test]
         public async Task ObterBlogDeveTrazerBlogPorIdComPosts()
         {
-            var contexto = GetService<BloggingContext>();
             var blog = new Blog
             {
                 Url = "http://high5devs.com",
@@ -51,10 +51,10 @@ namespace AspNetCoreIntegrationTestSample.IntegrationTests.Specs
                 }
             );
 
-            contexto.Add(blog);
-            contexto.SaveChanges();
+            _contextParaTestes.Add(blog);
+            _contextParaTestes.SaveChanges();
 
-            var repositorio = GetServiceParaAsserts<BlogsRepositorio>();
+            var repositorio = GetService<BlogsRepositorio>();
 
             var blogDoBanco = await repositorio.ObterBlog(blog.BlogId);
 

@@ -22,7 +22,7 @@ namespace AspNetCoreIntegrationTestSample.IntegrationTests
                 });
             });
             
-            var scopeMigration = Factory.Services.CreateScope();
+            using var scopeMigration = Factory.Services.CreateScope();
             var bloggingContext = scopeMigration.ServiceProvider.GetService<BloggingContext>();
 
             bloggingContext.Database.EnsureDeleted();

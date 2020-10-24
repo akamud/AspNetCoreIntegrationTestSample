@@ -14,16 +14,16 @@ namespace AspNetCoreIntegrationTestSample.IntegrationTests.Suporte
         };
 
         protected static IServiceScope _scope;
-        protected static IServiceScope _scopeParaAsserts;
+        protected static BloggingContext _contextParaTestes;
         protected static T GetService<T>() => _scope.ServiceProvider.GetService<T>();
-        protected static T GetServiceParaAsserts<T>() => _scopeParaAsserts.ServiceProvider.GetService<T>();
 
         // Simula scope do request
         [SetUp]
         public async Task SetUpScope()
         {
             _scope = AmbienteTestes.Factory.Services.CreateScope();
-            _scopeParaAsserts = AmbienteTestes.Factory.Services.CreateScope();
+            _contextParaTestes = AmbienteTestes.Factory.Services.CreateScope().ServiceProvider
+                .GetService<BloggingContext>();
 
             var configuration =
                 (ConfigurationRoot) AmbienteTestes.Factory.Services.GetService(typeof(IConfiguration));
@@ -37,7 +37,7 @@ namespace AspNetCoreIntegrationTestSample.IntegrationTests.Suporte
         public void TearDownScope()
         {
             _scope.Dispose();
-            _scopeParaAsserts.Dispose();
+            _contextParaTestes.Dispose();
         }
     }
 }
